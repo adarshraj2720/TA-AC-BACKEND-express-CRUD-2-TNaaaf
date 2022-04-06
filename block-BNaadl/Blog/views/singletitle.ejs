@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <title>Title</title>
+</head>
+<body>
+    <header class="title">
+        <a href="/">
+            <h1>BLOG</h1>
+        </a>
+        <a href="/users/new">
+            <button class="add-btn">Add Articel</button>
+        </a>
+    </header>
+    <h2>Articels</h2>
+    <% articels.forEach(articel=>{%>
+        <p><%=articel.title%></p>
+        <a href="/users/<%=articel.id%>">
+            <button>MORE</button>
+        </a>
+
+        <%})%>
+</body>
+</html>

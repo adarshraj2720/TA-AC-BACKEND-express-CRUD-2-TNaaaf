@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <title>Details</title>
+</head>
+<body>
+    <header class="form">
+        <a href="/">
+            <h1>BLOG</h1>
+        </a>
+    </header>
+    <h2>Articles Details</h2>
+    <h4>Title:<%=userdata.title%></h4>
+    <h4>Description:<%=userdata.description%></h4>
+    <h5>Tags:<%=userdata.tags%></h5>
+    <h5>Author:<%=userdata.author%></h5>
+    <h6>Likes:<%=userdata.likes %></h6>
+    
+    <a href="/users/<%=userdata._id%>/edit">
+        <button>EDIT</button>
+    </a>
+    <a href="/users/<%=userdata._id%>/delete">
+        <button>DELETE</button>
+    </a>
+    <a href="/users/<%=userdata._id%>/like">
+        <button>LIKE</button>
+    </a>
+    <a href="/users/<%=userdata._id%>/dislike">
+        <button>DISLIKE</button>
+    </a>
+</body>
+</html>

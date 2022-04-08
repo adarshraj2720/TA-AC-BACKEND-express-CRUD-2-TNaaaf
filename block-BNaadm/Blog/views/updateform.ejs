@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <title>Update</title>
+</head>
+<body>
+    <header class="form">
+        <a href="/">
+            <h1>BLOG</h1>
+        </a>
+    </header>
+    <form action="/users/<%=updatedata._id%>" method="POST">
+        <input type="text" name="title" id="title" placeholder="Title" value="<%=updatedata.title%>"><br>
+        <input type="text" name="description" id="description" placeholder="Description" value="<%=updatedata.description%>"><br>
+        <input type="text" name="tags" id="tags" placeholder="Tags" value="<%=updatedata.tags%>"><br>
+        <input type="text" name="author" id="author" placeholder="Author" value="<%=updatedata.author%>"><br>
+        <button type="submit">SUBMIT</button>
+    </form>
+</body>
+</html>

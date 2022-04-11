@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update</title>
+</head>
+<body>
+    <form action="/users/<%=updatebook._id%>/" method="POST">
+        <input type="text" name="title" id="" placeholder="Title" value="<%=updatebook.title%>">
+        <input type="text" name="summary" id="" placeholder="Summary" value="<%=updatebook.summary%>">
+        <input type="number" name="pages" id="" placeholder="Pages" value="<%=updatebook.pages%>">
+        <input type="text" name="publication" id="" placeholder="Publication" value="<%=updatebook.publication%>">
+        <input type="text" name="coverImage" id="" placeholder="CoverImage" value="<%=updatebook.coverImage%>">
+        <button type="submit">SUBMIT</button>
+    </form>
+</body>
+</html>

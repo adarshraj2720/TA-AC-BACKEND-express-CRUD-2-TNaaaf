@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SINGLE</title>
+</head>
+<body>
+    <p>Title:<%=books.title%></p>
+    <h1>Summary:<%=books.summary%></h1>
+    <h2>Pages:<%=books.pages%></h2>
+    <h2>Publication:<%=books.publication%></h2>
+    <h2>CoverImage:<%=books.coverImage%></h2>
+    <!-- <p><%=books.authorID[0].name%></p> -->
+    <%books.authorID.forEach((author)=>{ %>
+        <p><%=author.name%></p>
+   <% })%>
+    <h1>Author</h1>
+    <form action="/users/<%=books._id%>/author" method="POST">
+        <input type="text" name="name" id="name" placeholder="Name">
+        <input type="text" name="email" id="email" placeholder="Email">
+        <input type="text" name="country" id="country" placeholder="Country">
+        <button type="submit">Submit</button>
+    </form>
+    <h1>category</h1>
+    <form action="/users/<%=books._id%>/category" method="POST">
+        <input type="text" name="fiction" id="fiction" placeholder="Fiction">
+        <input type="text" name="adventure" id="adventure" placeholder="Adventure">
+        <input type="text" name="technology" id="technology" placeholder="Technology">
+        <input type="text" name="motivation" id="motivation" placeholder="Motivation">
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
